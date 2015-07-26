@@ -9,4 +9,8 @@ class Coach
     @@list << name
   end
 
+  def self.delete(name)
+    @@list.delete(name)
+  end
+
 end

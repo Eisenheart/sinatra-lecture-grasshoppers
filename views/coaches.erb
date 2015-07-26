@@ -6,6 +6,9 @@ the list of coaches is:
 
 <ul>
   <% @coaches.each do |coach| %>
-    <li><%= coach %></li>
+    <% #if coach == 'John' %>
+      <!-- <h3>Hey, that's me!</h3> -->
+    <% #end %>
+    <li><a href="/coaches/<%= coach %>"><%= coach %></a></li>
   <% end %>
 </ul>

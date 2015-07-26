@@ -25,3 +25,35 @@ post '/coaches/create' do
   Coach.create(coach)
   redirect '/coaches'
 end
+
+get '/coaches/:coach' do
+  @name = params['coach']
+
+  # hypothetically
+  # coach = Coach.find_by_name(name)
+  # if coach actually exists
+    # render
+  # otherwise
+    # don't allow
+
+  erb :show
+end
+
+# why not /coaches/:name/delete ???
+post '/coaches/delete/:name' do
+  ap params
+  name = params['name']
+  Coach.delete(name)
+  redirect '/coaches'
+end
+
+
+
+
+
+
+
+
+
+
+
