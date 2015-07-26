@@ -5,4 +5,8 @@ class Coach
     @@list
   end
 
+  def self.create(name)
+    @@list << name
+  end
+
 end
